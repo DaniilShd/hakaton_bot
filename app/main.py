@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler
-from models import User, SessionLocal  # Импортируем модель и сессию из предыдущего шага
+from repository_models import User, SessionLocal  # Импортируем модель и сессию из предыдущего шага
 from model.modelResNet50 import predict
 
 # Загружаем переменные окружения
@@ -137,11 +137,10 @@ async def classify_image(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [["Выйти в главное меню"]]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=True)
     await update.message.reply_text(
-        f"Фото сохранено: {file_path} and class = {predicted_class}\n Загрузите следующее изображение",
+        f"Сlass = {predicted_class}\n Загрузите следующее изображение",
         reply_markup = reply_markup,
 
     )
-
 
 # Отмена регистрации
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
