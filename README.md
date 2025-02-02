@@ -13,7 +13,8 @@ git clone https://github.com/DaniilShd/hakaton_bot
 
 Создайте и активируйте виртуальное окружение:
 ```sh
-python3 -m venv venv
+cd hakaton_bot
+python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate  # Windows
 ```
