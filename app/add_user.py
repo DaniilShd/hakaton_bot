@@ -1,4 +1,4 @@
-from repository.models import User, SessionLocal  # Импортируем модель и сессию из предыдущего шага
+from app.models import User, SessionLocal  # Импортируем модель и сессию из предыдущего шага
 
 # Создаем сессию
 db = SessionLocal()

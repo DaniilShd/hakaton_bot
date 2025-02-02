@@ -1,9 +1,8 @@
 import os
 from dotenv import load_dotenv
-from telegram import Update, InputFile, ReplyKeyboardMarkup, ReplyKeyboardRemove
+from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler
-from sqlalchemy.orm import Session
-from repository.models import User, SessionLocal  # Импортируем модель и сессию из предыдущего шага
+from models import User, SessionLocal  # Импортируем модель и сессию из предыдущего шага
 from model.modelResNet50 import predict
 
 # Загружаем переменные окружения
@@ -177,6 +176,7 @@ if __name__ == "__main__":
         fallbacks=[MessageHandler(filters.Text("Отмена"), cancel)],
     )
 
+
     conv_handler_ResNet50 = ConversationHandler(
         entry_points=[MessageHandler(filters.Text("ResNet50"), load_image)],
         states={
@@ -189,7 +189,6 @@ if __name__ == "__main__":
     application.add_handler(conv_handler)
     application.add_handler(conv_handler_ResNet50)
     application.add_handler(CommandHandler("start", start))
-    # application.add_handler(MessageHandler(filters.Text("ResNet50"), test))
     application.add_handler(MessageHandler(filters.COMMAND, unknown))
 
     # Запускаем бота

@@ -4,7 +4,7 @@ from torchvision import models, transforms
 from PIL import Image
 
 # Пути
-MODEL_PATH = "../model/resnet50-smokedataset/model.safetensors"
+MODEL_PATH = "model/resnet50-smokedataset/model.safetensors"
 # IMAGE_PATH = "image/fire.jpg"
 
 # Создаем модель ResNet50
