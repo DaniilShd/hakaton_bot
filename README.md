@@ -6,6 +6,26 @@
 Шаг 1: Клонирование репозитория
 
 ```sh
-git clone https://github.com/azat-khatyn/tsu-cv-msc-ecosystem-monitoring
-cd tsu-cv-msc-ecosystem-monitoring
+git clone https://github.com/DaniilShd/hakaton_bot
+```
+Шаг 2: Установка зависимостей
+
+Создайте и активируйте виртуальное окружение:
+```sh
+python3 -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate  # Windows
+```
+
+Установите зависимости:
+
+```sh
+pip install -r requirements.txt
+```
+
+Шаг 3: Запуск приложения
+
+```sh
+cd app
+python main.py
 ```
