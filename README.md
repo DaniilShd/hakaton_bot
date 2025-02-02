@@ -2,5 +2,10 @@
 Телеграм бот для взаимодействия с дообученными моедлями по распознованию образов. 
 
 
-# Запуск телеграм бота из файла main.py
+# Запуск телеграм бота
+Шаг 1: Клонирование репозитория
 
+```sh
+git clone https://github.com/azat-khatyn/tsu-cv-msc-ecosystem-monitoring
+cd tsu-cv-msc-ecosystem-monitoring
+```
