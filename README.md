@@ -6,6 +6,7 @@
 Шаг 1: Клонирование репозитория
 
 ```sh
+git init
 git clone https://github.com/DaniilShd/hakaton_bot
 ```
 Шаг 2: Установка зависимостей
