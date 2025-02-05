@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler
 from repository_models import User, SessionLocal  # Импортируем модель и сессию из предыдущего шага
-from model.modelResNet50 import predict
+from model.new_model import predict
 
 # Загружаем переменные окружения
 load_dotenv()
